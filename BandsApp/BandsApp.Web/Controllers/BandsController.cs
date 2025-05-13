@@ -13,4 +13,16 @@ public class BandsController : Controller
         var bands = bandService.GetAllBands();
         return View(bands);
     }
+
+    [Route("/details/{id:int}")]
+    public IActionResult Details(int id)
+    {
+        var band = bandService.GetBandById(id);
+        if (band == null)
+        {
+            return NotFound();
+        }
+       
+        return View(band);
+    }
 }
