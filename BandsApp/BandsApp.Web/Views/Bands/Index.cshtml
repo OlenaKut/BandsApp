@@ -1,16 +1,5 @@
 ﻿@model BandsApp.Web.Models.Band[]
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Bands</title>
-        <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@@picocss/pico@2/css/pico.colors.min.css">
-        <link rel="stylesheet" href="/css/style.css" />
-    </head>
-    <body>
-    <main class="container">
-
     <h1 class="pico-color-pink-750">Bands</h1>
         <ol>
 		@foreach (var band in Model)
@@ -18,6 +7,4 @@
             <li><a href="/details/@band.Id">@band.Name, @band.Description</a></li>
 		}
         </ol>
-    </main>
-    </body>
-    </html>
+   
