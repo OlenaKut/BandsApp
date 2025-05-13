@@ -9,5 +9,14 @@ namespace BandsApp.Web.Services
             new Band { Id = 2, Name = "Depeche Mode", Description = "English electronic band" },
             new Band { Id = 3, Name = "ABBA", Description = "Swedish pop group" },
             ];
+
+        public Band? GetBandById(int id)
+        {
+            return bands.SingleOrDefault(b => b.Id == id);
+        }
+
+        public Band[] GetAllBands => bands 
+            .OrderBy(b => b.Name)
+            .ToArray();
     }
 }
