@@ -1,10 +1,15 @@
 ﻿@model BandsApp.Web.Models.Band
 
-    <img src="/images/@Model.ImageName" style="max-width: 300px;">
-    <h1>@Model.Name</h1>
-	<p>@Model.Description</p>
+<img src="/images/@Model.ImageName" style="max-width: 300px;">
+<h1>@Model.Name</h1>
+<p>@Model.Description</p>
 
-
+<ul>
+    @foreach(var album in @Model.Albums)
+    {
+        <li>@album.Title, @album.ReleaseYear</li>
+    }
+    </ul>
 
     <a href="/">Back to list</a>
 

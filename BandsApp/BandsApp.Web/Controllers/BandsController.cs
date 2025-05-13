@@ -18,11 +18,12 @@ public class BandsController : Controller
     public IActionResult Details(int id)
     {
         var band = bandService.GetBandById(id);
+        band.Albums = bandService.GetAlbumsByBandId(id).ToList();
         if (band == null)
         {
             return NotFound();
         }
-       
+
         return View(band);
     }
 }
