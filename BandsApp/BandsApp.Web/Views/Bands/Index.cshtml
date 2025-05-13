@@ -4,17 +4,16 @@
 <html>
     <head>
         <title>Bands</title>
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
         <h1>Bands</h1>
         <ol>
 		@foreach (var band in Model)
 		{
-			<li>@band.Name, @band.Description</li>
+            <li><a href="/details/@band.Id">@band.Name, @band.Description</a></li>
 		}
         </ol>
-
-
     
     </body>
     </html>

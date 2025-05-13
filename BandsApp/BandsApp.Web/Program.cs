@@ -10,6 +10,7 @@ public class Program
         var app = builder.Build();
 
         app.MapControllers();
+        app.UseStaticFiles();
         app.Run();
     }
 }
