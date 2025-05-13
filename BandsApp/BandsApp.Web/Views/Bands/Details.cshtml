@@ -3,6 +3,7 @@
 <img src="/images/@Model.ImageName" style="max-width: 300px;">
 <h1>@Model.Name</h1>
 <p>@Model.Description</p>
+<h3>Albums:</h3>
 
 <ul>
     @foreach(var album in @Model.Albums)
@@ -10,6 +11,7 @@
         <li>@album.Title, @album.ReleaseYear</li>
     }
     </ul>
+<iframe width="560" height="315" src="@Model.VideoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     <a href="/">Back to list</a>
 

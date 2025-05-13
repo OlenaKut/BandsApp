@@ -5,9 +5,9 @@ namespace BandsApp.Web.Services;
 public class BandService
 {
     List<Band> bands = [
-        new Band { Id = 1, Name = "Beatles", Description = "Pop and rock bands", ImageName = "theBeatles.jpg" },
-        new Band { Id = 2, Name = "Depeche Mode", Description = "English electronic band", ImageName = "depecheMode.jpg" },
-        new Band { Id = 3, Name = "ABBA", Description = "Swedish pop group", ImageName = "abba.jpg" },
+        new Band { Id = 1, Name = "Beatles", Description = "Pop and rock bands", ImageName = "theBeatles.jpg", VideoUrl = "https://www.youtube.com/embed/1LbtBBvjOWw?si=edXE2zNYuZX49R7k"},
+        new Band { Id = 2, Name = "Depeche Mode", Description = "English electronic band", ImageName = "depecheMode.jpg", VideoUrl ="https://www.youtube.com/embed/u1xrNaTO1bI?si=dFwyXls2gm-Yagi7" },
+        new Band { Id = 3, Name = "ABBA", Description = "Swedish pop group", ImageName = "abba.jpg", VideoUrl = "https://www.youtube.com/embed/xFrGuyw1V8s?si=_v2tMGwVXL6fQsOy" },
         ];
 
     public Band? GetBandById(int id)
